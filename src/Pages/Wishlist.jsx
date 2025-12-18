@@ -1,15 +1,6 @@
 import React, { useState } from 'react'
-import {
-  Bar,
-  BarChart,
-  CartesianGrid,
-  Legend,
-  ResponsiveContainer,
-  Tooltip,
-  XAxis,
-  YAxis,
-} from 'recharts'
 import { loadWishlist, removeFromWishlist } from '../utils/localStorage'
+import { FaDownload, FaStar } from 'react-icons/fa'
 
 const Wishlist = () => {
   const [wishlist, setWishlist] = useState(() => loadWishlist())
@@ -49,7 +40,7 @@ const Wishlist = () => {
   console.log(chartData)
 
   return (
-    <div className='space-y-6 max-w-[1480px] mx-auto'>
+    <div className='space-y-6 max-w-[1480px] mx-auto mb-30'>
 
       <div className='text-center my-10 text-4xl'>
         <h1 className='text-4xl font-bold'>Your Installed Apps </h1>
@@ -58,9 +49,8 @@ const Wishlist = () => {
 
       <div className='flex justify-between py-5 items-center'>
         <h1 className='text-3xl font-semibold'>
-          Wishlist{' '}
-          <span className='text-sm text-gray-500'>
-            ({sortedItem.length}) Products Found.
+          <span className='text-2x'>
+            {sortedItem.length} Products Found.
           </span>
         </h1>
 
@@ -78,7 +68,7 @@ const Wishlist = () => {
       </div>
       <div className='space-y-3'>
         {sortedItem.map(p => (
-          <div key={p.id} className='card card-side bg-base-100 shadow border'>
+          <div key={p.id} className='card card-side bg-base-100 shadow '>
             <figure>
               <img
                 className='w-40 h-28 object-cover'
@@ -86,40 +76,41 @@ const Wishlist = () => {
                 alt={p.name}
               />
             </figure>
+
+
             <div className='card-body'>
-              <h3 className='card-title'>{p.name}</h3>
-              <p className='text-base-content/70'>{p.category}</p>
+
+              <h3 className='card-title'>{p.title}</h3>
+
+              <div className="flex gap-5">
+
+                <div className='flex items-center gap-2'>
+                  <FaDownload className="text-green-600 text-lg" />
+                  <p className="text-xl font-bold">{p.downloads}</p>
+                </div>
+
+                <div className='flex items-center gap-2'>
+                  <FaStar className="text-orange-500 text-lg" />
+                  <p className="text-xl font-bold">{p.ratingAvg}</p>
+                </div>
+
+                <div className='flex items-center'>
+                  <p className="text-xl font-bold text-gray-500">({p.size} MB)</p>
+                </div>
+
+              </div>
+
             </div>
             <div className='pr-4 flex items-center gap-3'>
-              <div className='font-semibold'>{p.price}</div>
-              <button
-                onClick={() => handleRemove(p.id)}
-                className='btn btn-outline'
-              >
-                Remove
-              </button>
+
+              <button onClick={() => handleRemove(p.id)} className='btn btn-success text-white'> Uninstall</button>
+
             </div>
           </div>
         ))}
       </div>
 
-      {/* chart */}
-      <div className='space-y-3'>
-        <h3 className='text-xl font-semibold'>Wishlist Summery</h3>
-        <div className='bg-base-100 border rounded-xl p-4 h-80'>
-          <ResponsiveContainer width='100%' height='100%'>
-            <BarChart data={chartData}>
-              <CartesianGrid strokeDasharray='3 3' />
-              <XAxis dataKey='category' />
-              <YAxis />
-              <Tooltip />
-              <Legend />
 
-              <Bar dataKey='total' fill='#82ca9d' />
-            </BarChart>
-          </ResponsiveContainer>
-        </div>
-      </div>
     </div>
   )
 }
