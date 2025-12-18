@@ -19,9 +19,9 @@ const Wishlist = () => {
 
   const sortedItem = (() => {
     if (sortOrder === 'price-asc') {
-      return [...wishlist].sort((a, b) => a.price - b.price)
+      return [...wishlist].sort((a, b) => a.size - b.size)
     } else if (sortOrder === 'price-desc') {
-      return [...wishlist].sort((a, b) => b.price - a.price)
+      return [...wishlist].sort((a, b) => b.size - a.size)
     } else {
       return wishlist
     }
@@ -50,6 +50,12 @@ const Wishlist = () => {
 
   return (
     <div className='space-y-6 max-w-[1480px] mx-auto'>
+
+      <div className='text-center my-10 text-4xl'>
+        <h1 className='text-4xl font-bold'>Your Installed Apps </h1>
+        <h2 className='text-lg text-gray-600 my-2 '>Explore All Trending Apps on the Market developed by us</h2>
+      </div>
+
       <div className='flex justify-between py-5 items-center'>
         <h1 className='text-3xl font-semibold'>
           Wishlist{' '}
@@ -64,7 +70,7 @@ const Wishlist = () => {
             value={sortOrder}
             onChange={e => setSortOrder(e.target.value)}
           >
-            <option value='none'>Sort by price</option>
+            <option value='none'>Sort by size</option>
             <option value='price-asc'>Low-&gt;High</option>
             <option value='price-desc'>High-&gt;Low</option>
           </select>
@@ -85,7 +91,7 @@ const Wishlist = () => {
               <p className='text-base-content/70'>{p.category}</p>
             </div>
             <div className='pr-4 flex items-center gap-3'>
-              <div className='font-semibold'>${p.price}</div>
+              <div className='font-semibold'>{p.price}</div>
               <button
                 onClick={() => handleRemove(p.id)}
                 className='btn btn-outline'

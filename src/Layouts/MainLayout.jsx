@@ -7,7 +7,7 @@ const MainLayout = () => {
     <div className='flex flex-col min-h-screen'>
       <Navbar />
 
-      <div className=' w-full'>
+      <div className=' w-full pt-20'>
         <Outlet />
       </div>
       <Footer />
@@ -17,7 +17,3 @@ const MainLayout = () => {
 
 export default MainLayout
 
-
-
-
-{/* md:px-8 lg:px-12 py-4 md:py-8 lg:py-12 */ }

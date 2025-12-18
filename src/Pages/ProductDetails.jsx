@@ -3,6 +3,16 @@ import { useParams } from 'react-router'
 import useProducts from '../hooks/useProducts'
 import { updateList } from '../utils/localStorage'
 
+import { FaDownload, FaStar, FaRegCommentDots } from "react-icons/fa";
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  Tooltip,
+  ResponsiveContainer
+} from "recharts";
+
 const ProductDetails = () => {
   const { id } = useParams()
   const { products, loading } = useProducts()
@@ -11,7 +21,15 @@ const ProductDetails = () => {
 
   if (loading) return <p>Loading.......</p>
 
-  const { name, image, category, price, description } = product || {}
+  const { title, companyName, image, description, size, reviews, ratingAvg, downloads, ratings } = product || {}
+
+  const updateList2 = (product) => {
+    updateList(product);
+
+
+  }
+
+
 
   //   const handleAddToWishList = () => {
   //     const existingList = JSON.parse(localStorage.getItem('wishlist'))
@@ -27,24 +45,105 @@ const ProductDetails = () => {
   //   }
 
   return (
-    <div className='card bg-base-100 border shadow-sm max-w-[1480px] mx-auto'>
-      <figure className='h-84 overflow-hidden'>
-        <img className='w-full object-cover' src={image} alt='Shoes' />
-      </figure>
-      <div className='card-body'>
-        <h2 className='card-title'>{name}</h2>
-        <p>{description}</p>
-        <p>Category: {category}</p>
-        <p>Price: ${price}</p>
-        <div className='card-actions justify-end'>
-          <button
-            onClick={() => updateList(product)}
-            className='btn btn-outline'
-          >
-            Add to Wishlist
-          </button>
+    <div className='max-w-[1480px] mx-auto mb-20'>
+
+      <div className="max-w-8xl mx-auto px-4 py-10">
+
+        {/* ===== Top Section ===== */}
+        <div className="grid md:grid-cols-3 gap-8 items-start border-b-2 border-gray-300 pb-8">
+
+          {/* App Image */}
+          <div className="flex justify-center">
+            <img
+              src={image}
+              alt="App Logo"
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          {/* App Info */}
+          <div className="md:col-span-2 space-y-4">
+            <h1 className="text-4xl font-bold">
+              {title}
+            </h1>
+
+            <p className="text-lg text-gray-500">
+              Developed by <span className="text-blue-600 font-medium">{companyName}</span>
+            </p>
+
+            {/* ===== Stats with Icons ===== */}
+            <div className="flex gap-20 my-10">
+
+              <div className="flex items-center gap-10">
+                <div>
+                  <FaDownload className="text-green-600 text-3xl" />
+                  <p className="text-sm text-gray-500">Downloads</p>
+                  <p className="text-3xl font-bold">{downloads}</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-2">
+                <div>
+                  <FaStar className="text-orange-500 text-3xl" />
+                  <p className="text-sm text-gray-500">Avg Rating</p>
+                  <p className="text-3xl font-bold">{ratingAvg}</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-2">
+                <div>
+                  <FaRegCommentDots className="text-purple-600 text-3xl" />
+                  <p className="text-sm text-gray-500">Reviews</p>
+                  <p className="text-3xl font-bold">{reviews}</p>
+                </div>
+              </div>
+
+            </div>
+
+            {/* Install Button */}
+            <button
+              onClick={() => updateList2(product)}
+              className="btn btn-success mt-4 text-white">
+
+              Install Now ({size} MB)
+            </button>
+          </div>
         </div>
+
+        {/* ===== Ratings Chart Section ===== */}
+        <div className="mt-10">
+          <h2 className="text-lg font-semibold mb-4">Ratings</h2>
+
+          <div className="w-full h-64">
+            <ResponsiveContainer width="100%" height="100%">
+              <BarChart
+                data={[...ratings].reverse()}
+                layout="vertical"
+              >
+                <XAxis type="number" />
+                <YAxis dataKey="name" type="category" />
+                <Tooltip />
+                <Bar dataKey="count" fill="#fb923c" radius={[4, 4, 4, 4]} />
+              </BarChart>
+            </ResponsiveContainer>
+          </div>
+
+        </div>
+
+        {/* ===== Description ===== */}
+        <div className="mt-10 border-t-2 border-gray-300 pt-6">
+          <h2 className="text-lg font-semibold mb-3">Description</h2>
+          <p className="text-gray-600 leading-relaxed">
+            {description}
+          </p>
+        </div>
+
       </div>
+
+
+
+
+
     </div>
   )
 }

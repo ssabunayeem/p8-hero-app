@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import useProducts from '../hooks/useProducts'
 import ProductCard from '../Components/ProductCard'
 import SkeletonLoader from '../Components/SkeletonLoader'
+import err from '../assets/App-Error.png'
+
 
 const Products = () => {
   const { products, loading } = useProducts()
@@ -9,9 +11,11 @@ const Products = () => {
   const term = search.trim().toLocaleLowerCase()
   const searchedProducts = term
     ? products.filter(product =>
-      product.name.toLocaleLowerCase().includes(term)
+      product.title.toLocaleLowerCase().includes(term)
     )
     : products
+
+
 
   return (
     <div className='max-w-[1480px] mx-auto mb-15'>
@@ -38,15 +42,44 @@ const Products = () => {
           />
         </label>
       </div>
-      {loading ? (
+
+      {/* {loading ? (
         <SkeletonLoader count={16} />
       ) : (
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
           {searchedProducts.map(product => (
             <ProductCard key={product.id} product={product} />
           ))}
+
+          <div className='col-span-4 row-span-2'>
+            {
+              searchedProducts.length == 0 && <img src={err} alt="" />
+            }
+
+          </div>
+
+
+
+        </div>
+      )} */}
+
+      {loading ? (
+        <SkeletonLoader count={16} />
+      ) : searchedProducts.length === 0 ? (
+        // ✅ No Data Found Section
+        <div className="flex flex-col items-center justify-center h-[50vh]">
+          <img src={err} alt="No App Found" className="w-fit opacity-80" />
+        </div>
+      ) : (
+        // ✅ Products Grid
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          {searchedProducts.map(product => (
+            <ProductCard key={product.id} product={product} />
+          ))}
         </div>
       )}
+
+
     </div>
   )
 }

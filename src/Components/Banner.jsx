@@ -47,13 +47,13 @@ const Banner = () => {
 
 
 
-            <div className='bg-amber-500 min-h-60 py-10 bg-linear-160  from-violet-700 via-purple-500 to-purple-400 text-white'>
+            <div className='bg-amber-500 min-h-60 py-30 bg-linear-160  from-indigo-700 via-purple-500 to-purple-400 text-white'>
 
                 <div className='text-5xl font-bold text-center'>
                     <h1>Trusted by Millions, Built for You</h1>
                 </div>
 
-                <div className='flex gap-5 justify-center my-10'>
+                <div className='flex gap-5 justify-center mt-10'>
                     <div className="stats ">
                         <div className="stat text-center w-60">
                             <div className="">Total Downloads</div>

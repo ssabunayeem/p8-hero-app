@@ -5,7 +5,7 @@ import { BiLogoGithub } from "react-icons/bi";
 
 const Navbar = () => {
   return (
-    <div className='navbar bg-violet-50 shadow-lg lg:px-50'>
+    <div className='navbar bg-violet-100 shadow-lg lg:px-50  fixed z-10'>
       <div className='navbar-start'>
         <div className='dropdown'>
           <div tabIndex={0} role='button' className='btn btn-ghost lg:hidden'>
