@@ -27,7 +27,7 @@ const ProductDetails = () => {
   //   }
 
   return (
-    <div className='card bg-base-100 border shadow-sm'>
+    <div className='card bg-base-100 border shadow-sm max-w-[1480px] mx-auto'>
       <figure className='h-84 overflow-hidden'>
         <img className='w-full object-cover' src={image} alt='Shoes' />
       </figure>

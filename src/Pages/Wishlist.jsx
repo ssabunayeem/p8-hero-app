@@ -49,7 +49,7 @@ const Wishlist = () => {
   console.log(chartData)
 
   return (
-    <div className='space-y-6'>
+    <div className='space-y-6 max-w-[1480px] mx-auto'>
       <div className='flex justify-between py-5 items-center'>
         <h1 className='text-3xl font-semibold'>
           Wishlist{' '}

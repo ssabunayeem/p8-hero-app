@@ -1,0 +1,530 @@
+[
+    {
+        "id": 1,
+        "title": "Chatify",
+        "companyName": "MetaSoft",
+        "image": "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7",
+        "description": "Chatify is a fast and secure messaging app with end-to-end encryption.",
+        "size": 45,
+        "reviews": 1200,
+        "ratingAvg": 4.5,
+        "downloads": 500000,
+        "ratings": [
+            {
+                "name": "1 star",
+                "count": 50
+            },
+            {
+                "name": "2 star",
+                "count": 80
+            },
+            {
+                "name": "3 star",
+                "count": 200
+            },
+            {
+                "name": "4 star",
+                "count": 350
+            },
+            {
+                "name": "5 star",
+                "count": 520
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title": "PhotoSnap",
+        "companyName": "Pixel Labs",
+        "image": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32",
+        "description": "PhotoSnap helps you edit photos with professional filters.",
+        "size": 60,
+        "reviews": 980,
+        "ratingAvg": 4.2,
+        "downloads": 350000,
+        "ratings": [
+            {
+                "name": "1 star",
+                "count": 40
+            },
+            {
+                "name": "2 star",
+                "count": 70
+            },
+            {
+                "name": "3 star",
+                "count": 180
+            },
+            {
+                "name": "4 star",
+                "count": 300
+            },
+            {
+                "name": "5 star",
+                "count": 390
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "title": "TaskPro",
+        "companyName": "WorkSmart",
+        "image": "https://images.unsplash.com/photo-1586281380349-632531db7ed4",
+        "description": "TaskPro helps you manage tasks and stay productive.",
+        "size": 30,
+        "reviews": 760,
+        "ratingAvg": 4.0,
+        "downloads": 200000,
+        "ratings": [
+            {
+                "name": "1 star",
+                "count": 30
+            },
+            {
+                "name": "2 star",
+                "count": 60
+            },
+            {
+                "name": "3 star",
+                "count": 150
+            },
+            {
+                "name": "4 star",
+                "count": 250
+            },
+            {
+                "name": "5 star",
+                "count": 270
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "title": "FitLife",
+        "companyName": "HealthTech",
+        "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b",
+        "description": "FitLife tracks workouts and health activities.",
+        "size": 55,
+        "reviews": 1500,
+        "ratingAvg": 4.6,
+        "downloads": 800000,
+        "ratings": [
+            {
+                "name": "1 star",
+                "count": 40
+            },
+            {
+                "name": "2 star",
+                "count": 60
+            },
+            {
+                "name": "3 star",
+                "count": 180
+            },
+            {
+                "name": "4 star",
+                "count": 420
+            },
+            {
+                "name": "5 star",
+                "count": 800
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "title": "EduLearn",
+        "companyName": "EduWorld",
+        "image": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b",
+        "description": "EduLearn offers online courses and skill development.",
+        "size": 70,
+        "reviews": 640,
+        "ratingAvg": 4.3,
+        "downloads": 150000,
+        "ratings": [
+            {
+                "name": "1 star",
+                "count": 25
+            },
+            {
+                "name": "2 star",
+                "count": 50
+            },
+            {
+                "name": "3 star",
+                "count": 120
+            },
+            {
+                "name": "4 star",
+                "count": 220
+            },
+            {
+                "name": "5 star",
+                "count": 225
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "title": "MusicFlow",
+        "companyName": "SoundWave",
+        "image": "https://images.unsplash.com/photo-1511379938547-c1f69419868d",
+        "description": "MusicFlow streams millions of songs.",
+        "size": 80,
+        "reviews": 2100,
+        "ratingAvg": 4.7,
+        "downloads": 1200000,
+        "ratings": [
+            {
+                "name": "1 star",
+                "count": 60
+            },
+            {
+                "name": "2 star",
+                "count": 90
+            },
+            {
+                "name": "3 star",
+                "count": 250
+            },
+            {
+                "name": "4 star",
+                "count": 500
+            },
+            {
+                "name": "5 star",
+                "count": 1200
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "title": "WeatherNow",
+        "companyName": "SkyNet",
+        "image": "https://images.unsplash.com/photo-1501973801540-537f08ccae7b",
+        "description": "WeatherNow provides accurate weather forecasts.",
+        "size": 25,
+        "reviews": 430,
+        "ratingAvg": 3.9,
+        "downloads": 100000,
+        "ratings": [
+            {
+                "name": "1 star",
+                "count": 20
+            },
+            {
+                "name": "2 star",
+                "count": 40
+            },
+            {
+                "name": "3 star",
+                "count": 100
+            },
+            {
+                "name": "4 star",
+                "count": 150
+            },
+            {
+                "name": "5 star",
+                "count": 120
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "title": "NoteKeeper",
+        "companyName": "WriteEasy",
+        "image": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2",
+        "description": "NoteKeeper helps you take notes quickly.",
+        "size": 20,
+        "reviews": 520,
+        "ratingAvg": 4.1,
+        "downloads": 180000,
+        "ratings": [
+            {
+                "name": "1 star",
+                "count": 20
+            },
+            {
+                "name": "2 star",
+                "count": 40
+            },
+            {
+                "name": "3 star",
+                "count": 110
+            },
+            {
+                "name": "4 star",
+                "count": 180
+            },
+            {
+                "name": "5 star",
+                "count": 170
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "title": "ShopEasy",
+        "companyName": "EcomHub",
+        "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30",
+        "description": "ShopEasy is an online shopping app.",
+        "size": 90,
+        "reviews": 1750,
+        "ratingAvg": 4.4,
+        "downloads": 600000,
+        "ratings": [
+            {
+                "name": "1 star",
+                "count": 60
+            },
+            {
+                "name": "2 star",
+                "count": 90
+            },
+            {
+                "name": "3 star",
+                "count": 220
+            },
+            {
+                "name": "4 star",
+                "count": 380
+            },
+            {
+                "name": "5 star",
+                "count": 700
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "title": "TravelGo",
+        "companyName": "TripX",
+        "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
+        "description": "TravelGo helps you plan trips easily.",
+        "size": 85,
+        "reviews": 890,
+        "ratingAvg": 4.3,
+        "downloads": 250000,
+        "ratings": [
+            {
+                "name": "1 star",
+                "count": 30
+            },
+            {
+                "name": "2 star",
+                "count": 60
+            },
+            {
+                "name": "3 star",
+                "count": 160
+            },
+            {
+                "name": "4 star",
+                "count": 280
+            },
+            {
+                "name": "5 star",
+                "count": 360
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "title": "CodePlay",
+        "companyName": "DevZone",
+        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475",
+        "description": "CodePlay helps beginners learn coding.",
+        "size": 50,
+        "reviews": 670,
+        "ratingAvg": 4.6,
+        "downloads": 140000,
+        "ratings": [
+            {
+                "name": "1 star",
+                "count": 20
+            },
+            {
+                "name": "2 star",
+                "count": 30
+            },
+            {
+                "name": "3 star",
+                "count": 90
+            },
+            {
+                "name": "4 star",
+                "count": 220
+            },
+            {
+                "name": "5 star",
+                "count": 310
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "title": "SecureVault",
+        "companyName": "CyberSafe",
+        "image": "https://images.unsplash.com/photo-1605902711622-cfb43c4437d1",
+        "description": "SecureVault protects your files.",
+        "size": 65,
+        "reviews": 540,
+        "ratingAvg": 4.5,
+        "downloads": 190000,
+        "ratings": [
+            {
+                "name": "1 star",
+                "count": 15
+            },
+            {
+                "name": "2 star",
+                "count": 35
+            },
+            {
+                "name": "3 star",
+                "count": 100
+            },
+            {
+                "name": "4 star",
+                "count": 180
+            },
+            {
+                "name": "5 star",
+                "count": 210
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "title": "FoodExpress",
+        "companyName": "QuickEats",
+        "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836",
+        "description": "FoodExpress delivers food quickly.",
+        "size": 95,
+        "reviews": 1600,
+        "ratingAvg": 4.4,
+        "downloads": 700000,
+        "ratings": [
+            {
+                "name": "1 star",
+                "count": 70
+            },
+            {
+                "name": "2 star",
+                "count": 100
+            },
+            {
+                "name": "3 star",
+                "count": 260
+            },
+            {
+                "name": "4 star",
+                "count": 450
+            },
+            {
+                "name": "5 star",
+                "count": 720
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "title": "FinanceMate",
+        "companyName": "MoneyTech",
+        "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f",
+        "description": "FinanceMate helps manage personal finance.",
+        "size": 40,
+        "reviews": 610,
+        "ratingAvg": 4.2,
+        "downloads": 160000,
+        "ratings": [
+            {
+                "name": "1 star",
+                "count": 30
+            },
+            {
+                "name": "2 star",
+                "count": 50
+            },
+            {
+                "name": "3 star",
+                "count": 140
+            },
+            {
+                "name": "4 star",
+                "count": 210
+            },
+            {
+                "name": "5 star",
+                "count": 180
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "title": "VideoStream",
+        "companyName": "Streamly",
+        "image": "https://images.unsplash.com/photo-1524985069026-dd778a71c7b4",
+        "description": "VideoStream lets you watch videos online.",
+        "size": 120,
+        "reviews": 2400,
+        "ratingAvg": 4.6,
+        "downloads": 1500000,
+        "ratings": [
+            {
+                "name": "1 star",
+                "count": 90
+            },
+            {
+                "name": "2 star",
+                "count": 120
+            },
+            {
+                "name": "3 star",
+                "count": 300
+            },
+            {
+                "name": "4 star",
+                "count": 600
+            },
+            {
+                "name": "5 star",
+                "count": 1290
+            }
+        ]
+    },
+    {
+        "id": 16,
+        "title": "MapWay",
+        "companyName": "GeoTech",
+        "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
+        "description": "MapWay helps you navigate routes easily.",
+        "size": 75,
+        "reviews": 880,
+        "ratingAvg": 4.3,
+        "downloads": 300000,
+        "ratings": [
+            {
+                "name": "1 star",
+                "count": 35
+            },
+            {
+                "name": "2 star",
+                "count": 55
+            },
+            {
+                "name": "3 star",
+                "count": 160
+            },
+            {
+                "name": "4 star",
+                "count": 280
+            },
+            {
+                "name": "5 star",
+                "count": 350
+            }
+        ]
+    }
+]

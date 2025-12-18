@@ -9,7 +9,7 @@ const ProductCard = ({ product }) => {
         <img className='w-full object-cover' src={image} alt='Shoes' />
       </figure>
       <div className='card-body'>
-        <h2 className='card-title'>{name}</h2>
+        <h2 className='card-title'>{title}</h2>
 
         <p>Category: {category}</p>
         <p>Price: ${price}</p>
