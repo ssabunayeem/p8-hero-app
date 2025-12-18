@@ -12,6 +12,7 @@ import {
   Tooltip,
   ResponsiveContainer
 } from "recharts";
+import Spiner from '../Components/Spiner';
 // import { toast } from 'react-toastify';
 
 const ProductDetails = () => {
@@ -22,7 +23,7 @@ const ProductDetails = () => {
 
   const product = products.find(p => p.id === Number(id))
 
-  if (loading) return <p>Loading.......</p>
+  if (loading) return <Spiner></Spiner>
 
   const { title, companyName, image, description, size, reviews, ratingAvg, downloads, ratings } = product || {}
 
