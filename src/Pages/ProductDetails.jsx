@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useParams } from 'react-router'
 import useProducts from '../hooks/useProducts'
 import { updateList } from '../utils/localStorage'
@@ -12,10 +12,13 @@ import {
   Tooltip,
   ResponsiveContainer
 } from "recharts";
+// import { toast } from 'react-toastify';
 
 const ProductDetails = () => {
   const { id } = useParams()
   const { products, loading } = useProducts()
+
+  const [install, setInstall] = useState('Install Now')
 
   const product = products.find(p => p.id === Number(id))
 
@@ -24,8 +27,9 @@ const ProductDetails = () => {
   const { title, companyName, image, description, size, reviews, ratingAvg, downloads, ratings } = product || {}
 
   const updateList2 = (product) => {
-    updateList(product);
 
+    setInstall('Installed')
+    updateList(product);
 
   }
 
@@ -105,7 +109,7 @@ const ProductDetails = () => {
               onClick={() => updateList2(product)}
               className="btn btn-success mt-4 text-white">
 
-              Install Now ({size} MB)
+              {install} ({size} MB)
             </button>
           </div>
         </div>

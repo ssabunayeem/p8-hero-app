@@ -1,3 +1,5 @@
+import { toast } from "react-toastify"
+
 // get
 export const loadWishlist = () => {
   try {
@@ -15,7 +17,20 @@ export const updateList = product => {
 
   try {
     const isDuplicate = wishlist.some(p => p.id === product.id)
-    if (isDuplicate) return alert('Already added in wishlist')
+    if (isDuplicate) return toast.error(' app installed previously !!!', {
+      position: "top-right",
+      autoClose: 3000,
+      draggable: true,
+      theme: "colored",
+    });
+
+    else toast.success(' app installing....', {
+      position: "top-right",
+      autoClose: 3000,
+      draggable: true,
+      theme: "colored",
+    });
+
     const updatedWishlist = [...wishlist, product]
     localStorage.setItem('wishlist', JSON.stringify(updatedWishlist))
   } catch (err) {

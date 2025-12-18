@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import { loadWishlist, removeFromWishlist } from '../utils/localStorage'
 import { FaDownload, FaStar } from 'react-icons/fa'
+import Chatgpt from './Chatgpt'
 
 const Wishlist = () => {
   const [wishlist, setWishlist] = useState(() => loadWishlist())
   const [sortOrder, setSortOrder] = useState('none')
 
-  if (!wishlist.length) return <p>No Data Available</p>
+  if (!wishlist.length) return <Chatgpt></Chatgpt>
 
   const sortedItem = (() => {
     if (sortOrder === 'price-asc') {
