@@ -19,7 +19,10 @@ const ProductDetails = () => {
   const { id } = useParams()
   const { products, loading } = useProducts()
 
-  const [install, setInstall] = useState('Install Now')
+  // const [install, setInstall] = useState('Install Now')
+
+  const [installed, setInstalled] = useState(false)
+
 
   const product = products.find(p => p.id === Number(id))
 
@@ -28,11 +31,12 @@ const ProductDetails = () => {
   const { title, companyName, image, description, size, reviews, ratingAvg, downloads, ratings } = product || {}
 
   const updateList2 = (product) => {
+    if (installed) return; // safety guard
 
-    setInstall('Installed')
     updateList(product);
+    setInstalled(true);
+  };
 
-  }
 
 
 
@@ -108,10 +112,14 @@ const ProductDetails = () => {
             {/* Install Button */}
             <button
               onClick={() => updateList2(product)}
-              className="btn btn-success mt-4 text-white">
-
-              {install} ({size} MB)
+              disabled={installed}
+              className={`btn mt-4 text-white 
+    ${installed ? 'btn-disabled bg-gray-400 cursor-not-allowed' : 'btn-success'}
+  `}
+            >
+              {installed ? 'Installed' : 'Install Now'} ({size} MB)
             </button>
+
           </div>
         </div>
 

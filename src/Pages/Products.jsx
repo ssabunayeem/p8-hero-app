@@ -8,6 +8,19 @@ import err from '../assets/App-Error.png'
 const Products = () => {
   const { products, loading } = useProducts()
   const [search, setSearch] = useState('')
+  const [searchLoading, setSearchLoading] = useState(false);
+
+  const handleSearch = (e) => {
+    const value = e.target.value;
+    setSearch(value);
+    setSearchLoading(true);
+
+    setTimeout(() => {
+      setSearchLoading(false);
+    }, 400); // feels natural
+  };
+
+
   const term = search.trim().toLocaleLowerCase()
   const searchedProducts = term
     ? products.filter(product =>
@@ -36,48 +49,31 @@ const Products = () => {
         <label className='input'>
           <input
             value={search}
-            onChange={e => setSearch(e.target.value)}
-            type='search'
-            placeholder='Search Products'
+            onChange={handleSearch}
+            type="search"
+            placeholder="Search Products"
           />
+
         </label>
       </div>
 
-      {/* {loading ? (
-        <SkeletonLoader count={16} />
-      ) : (
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
-          {searchedProducts.map(product => (
-            <ProductCard key={product.id} product={product} />
-          ))}
-
-          <div className='col-span-4 row-span-2'>
-            {
-              searchedProducts.length == 0 && <img src={err} alt="" />
-            }
-
-          </div>
 
 
 
-        </div>
-      )} */}
-
-      {loading ? (
+      {loading || searchLoading ? (
         <SkeletonLoader count={16} />
       ) : searchedProducts.length === 0 ? (
-        // ✅ No Data Found Section
         <div className="flex flex-col items-center justify-center h-[50vh]">
           <img src={err} alt="No App Found" className="w-fit opacity-80" />
         </div>
       ) : (
-        // ✅ Products Grid
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {searchedProducts.map(product => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>
       )}
+
 
 
     </div>

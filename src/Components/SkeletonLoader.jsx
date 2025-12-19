@@ -1,4 +1,4 @@
-import React from 'react'
+/* import React from 'react'
 
 const SkeletonLoader = ({ count = 6 }) => {
   return (
@@ -17,3 +17,20 @@ const SkeletonLoader = ({ count = 6 }) => {
 }
 
 export default SkeletonLoader
+
+
+ */
+
+
+import React from 'react';
+import { PacmanLoader } from 'react-spinners';
+
+const SkeletonLoader = () => {
+  return (
+    <div className="flex justify-center items-center min-h-96">
+      <PacmanLoader color="#7c3aed" size={60} />
+    </div>
+  );
+};
+
+export default SkeletonLoader;
